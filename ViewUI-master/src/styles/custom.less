@@ -243,3 +243,89 @@
 @list-item-meta-margin-bottom: @padding-md;
 @list-item-meta-avatar-margin-right: @padding-md;
 @list-item-meta-title-margin-bottom: @padding-sm;
+
+
+// 主字体
+@km-font-color            :#555555;
+// 重字体
+@km-shade-font            :#333333;
+// 介于主字体和轻字体之间
+@km-font-minor            :#5E5E5E;
+// 轻字体
+@km-font-tint             :#9B9B9B;
+// 主字号
+@km-font-size             :14px;
+// 大字体
+@km-font-large            :16px;
+// 超大字体
+@km-font-big              :28px;
+// 主边框
+@km-border-color          :#E8E8E8;
+// grid背景
+@km-grid-bg               :#FAFAFA;
+// 主圆角
+@km-border-radio-size     :4px;
+// 主蓝色 #1A92FD
+@km-primary-color         :@primary-color;
+// 主轻蓝色
+@km-primary-tint          :#E6F6FF;
+// 主件边框
+@km-default-color         :#D5D5D5;
+// 主字体加重
+@km-font-weight           :600;
+// 主阴影
+@km-shadow-color          :rgba(0,0,0,.12);
+// 主背景
+@km-bg                    :#F8F8F8;
+// icon color
+@km-icon-color            :#8C8C8C;
+
+// theme
+// 暗
+// 主题
+@km-dark-bg               :#212430;
+// 字体
+@km-dark-color            :#CBCDD0;
+
+
+
+// statu
+// 主default #1A92FD
+@km-info                  :@primary-color;
+// 主error #F5222D
+@km-error                 :@error-color ;
+// 主warning #FFB424
+@km-warning               :@warning-color;
+// 主info #2FC25B
+@km-success               :@success-color;
+
+
+
+*{
+  .scrollbar
+}
+
+// scrollbar
+@scrollbar-thumb-color: #CDCDD0;
+@scrollbar-track-color: #F4F7F9;
+.scrollbar(@size:10){
+  &::-webkit-scrollbar{
+    width: ~"@{size}px";
+    height: ~"@{size}px";
+    background-color: @scrollbar-track-color;
+  }
+  &::-webkit-scrollbar-track{
+    background-color: @scrollbar-track-color;
+  }
+  &::-webkit-scrollbar-thumb{
+    border-radius: 0;
+    background-color: @scrollbar-thumb-color;
+    box-shadow: inset 0 0 5px @scrollbar-thumb-color;
+  }
+  &::-webkit-scrollbar-button{
+    display: none;
+    height: 0;
+    width: 0;
+    background-color: @scrollbar-track-color;
+  }
+}
