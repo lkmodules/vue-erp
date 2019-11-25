@@ -1,11 +1,13 @@
 <template>
-  <div class="home">
-    <Input/>
-  </div>
+  <div>storePriceChangeList</div>
 </template>
 
 <script>
 export default {
-  name: 'home'
+
 }
 </script>
+
+<style>
+
+</style>
