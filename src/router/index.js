@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import KmLayout from '@/layout/km-layout.vue'
-import asyncFiles from '@/business'
-
+import { buildRoutesByMenu } from '@/libs/utils.js'
+import routerComponents from '@/business'
+import menuList from './menu'
 Vue.use(VueRouter)
 
 const constRoutes = [
@@ -19,21 +20,40 @@ const constRoutes = [
     path: '/',
     name: '_home',
     component: KmLayout,
-    children: [{
-      path: '/home',
-      name: 'home',
-      meta: {
-        hideInMenu: true,
-        title: '首页',
-        icon: 'md-home'
-      },
-      component: () => import('../views/home/home.vue')
-    }]
+    children: [
+      {
+        path: '/home',
+        name: 'home',
+        meta: {
+          hideInMenu: true,
+          title: '首页',
+          icon: 'md-home'
+        },
+        component: () => import('../views/home/home.vue')
+      }
+    ]
   }
 ]
 
+// const asyncRoutes = buildRoutesByMenu(menuList, routerComponents)
+
 const asyncRoutes = [
-  
+  {
+    path: '/archives',
+    name: 'archives',
+    component: KmLayout,
+    children: [
+      {
+        path: 'localBranch',
+        name: 'localBranch',
+        meta: {
+          title: '首页',
+          icon: 'md-home'
+        },
+        component: routerComponents['archives/localBranch/localBranch']
+      }
+    ]
+  }
 ]
 
 const errorRoutes = [
