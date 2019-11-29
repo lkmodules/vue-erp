@@ -1,0 +1,57 @@
+@km-grid-span-cls: ~"km-grid-span";
+
+.@{km-grid-span-cls} {
+  table-layout: fixed;
+  word-wrap: break-word; 
+  word-break: break-all;
+  width: 100%;
+  border-top: 1px solid @km-border-color;
+  border-left: 1px solid @km-border-color;
+  th,
+  td {
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    position: relative;
+    padding: 0 10px;
+    border-bottom: 1px solid @km-border-color;
+    border-right: 1px solid @km-border-color;
+  }
+  th {
+    white-space: nowrap;
+    overflow: hidden;
+    color: @km-shade-font;
+    background-color: @table-thead-bg;
+    border-right: 1px solid @km-border-color;
+  }
+  &-cell-left {
+    text-align: left;
+  }
+
+  &-cell-center {
+    text-align: center;
+  }
+
+  &-cell-right {
+    text-align: right;
+  }
+
+  &-head-scroll {
+    overflow: hidden;
+  }
+
+  &-body-scroll{
+    overflow: auto;
+  }
+
+  &-body{
+    & tr:hover>td{
+      background-color: @km-primary-tint
+    }
+  }
+
+  
+
+}

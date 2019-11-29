@@ -58,6 +58,9 @@ import Tree from './components/tree';
 import Upload from './components/upload';
 import {Row, Col} from './components/grid';
 import {Select, Option, OptionGroup} from './components/select';
+import KmGrid from './components/km-grid';
+import KmGridTree from './components/km-grid-tree';
+import KmGridSpan from './components/km-grid-span';
 import locale from './locale/index';
 
 const components = {
@@ -139,7 +142,10 @@ const components = {
     Tooltip,
     Transfer,
     Tree,
-    Upload
+    Upload,
+    KmGrid,
+    KmGridTree,
+    KmGridSpan
 };
 
 const iview = {

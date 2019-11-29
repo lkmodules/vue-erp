@@ -1,0 +1,54 @@
+@km-grid-tree-cls: ~"km-grid-tree";
+
+.@{km-grid-tree-cls} {
+  border-top: 1px solid @km-border-color;
+
+  &-head {
+    &-tr {
+      &-td {
+        color: @km-shade-font;
+        background-color: @table-thead-bg;
+        padding: 0 15px;
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        border-right: 1px solid @km-border-color;
+        border-bottom: 1px solid @km-border-color;
+      }
+      &-td:last-child{
+        border-right: 0;
+      }
+    }
+  }
+
+  &-body {
+    &-tr {
+      &-td {
+        padding: 0 15px;
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        border-right: 1px solid @km-border-color;
+        border-bottom: 1px solid @km-border-color;
+      }
+
+      &-padding {
+        padding-left: 30px;
+      }
+
+      & .ivu-checkbox-wrapper{
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-expand-icon {
+    width: 20px;
+    height: 100%;
+    line-height: 40px;
+  }
+
+  &-row-content{
+    display: inline-block;
+  }
+}
